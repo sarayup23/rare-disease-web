@@ -30,10 +30,6 @@
             clinical trials, patient advocacy organizations,
             and support communities all in one place.
         </p>
-
-        <button onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})">
-            Ask Our AI Assistant
-        </button>
     </section>
 
     <section class="cards">
@@ -65,73 +61,4 @@
         </div>
 
         <div class="card">
-            <h3>Patient Resources</h3>
-
-            <p>
-                Access educational materials, advocacy organizations,
-                financial assistance programs, and healthcare resources.
-            </p>
-
-            <button onclick="window.location.href='resources.html'">
-                Find Resources
-            </button>
-        </div>
-
-        <div class="card">
-            <h3>Support Communities</h3>
-
-            <p>
-                Connect with patient networks, caregiver communities,
-                support groups, and mental health resources.
-            </p>
-
-            <button onclick="window.location.href='support.html'">
-                Find Support
-            </button>
-        </div>
-
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Rare Disease Information Portal</p>
-    </footer>
-
-    <!-- Chatbase AI Assistant -->
-    <script>
-    (function(){
-        if(!window.chatbase || window.chatbase("getState") !== "initialized"){
-            window.chatbase = (...arguments) => {
-                if(!window.chatbase.q){
-                    window.chatbase.q = [];
-                }
-                window.chatbase.q.push(arguments);
-            };
-
-            window.chatbase = new Proxy(window.chatbase,{
-                get(target,prop){
-                    if(prop === "q"){
-                        return target.q;
-                    }
-                    return (...args) => target(prop,...args);
-                }
-            });
-        }
-
-        const onLoad = function(){
-            const script = document.createElement("script");
-            script.src = "https://www.chatbase.co/embed.min.js";
-            script.id = "Q1DM_hfrqOgxOB5YCjSSe";
-            script.domain = "www.chatbase.co";
-            document.body.appendChild(script);
-        };
-
-        if(document.readyState === "complete"){
-            onLoad();
-        } else {
-            window.addEventListener("load", onLoad);
-        }
-    })();
-    </script>
-
-</body>
-</html>
+       
