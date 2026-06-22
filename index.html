@@ -1,115 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rare Disease Website Prototype</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Disease Information Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Q1DM_hfrqOgxOB5YCjSSe";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
-
 <body>
 
-<header>
-    <h1>Rare Disease Website Prototype</h1>
-    <p>Empowering patients, caregivers, and researchers.</p>
-</header>
+    <header>
+        <h1>Rare Disease Information Portal</h1>
+        <p>Empowering patients, caregivers, and researchers through accessible information and support.</p>
+    </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#diseases">Diseases</a>
-    <a href="#research">Research</a>
-    <a href="#support">Support</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="conditions.html">Diseases</a>
+        <a href="research.html">Research</a>
+        <a href="resources.html">Resources</a>
+        <a href="support.html">Support Groups</a>
+    </nav>
 
-<section id="home" class="hero">
-    <h2>Connecting Patients With Information</h2>
-    <p>
-        Learn about rare diseases, treatment options,
-        clinical trials, and support organizations.
-    </p>
+    <section class="hero">
+        <h2>Connecting Patients with Information and Resources</h2>
 
-    <button onclick="window.scrollTo(0, document.body.scrollHeight)">
-        Ask Our AI Assistant
-    </button>
-</section>
-
-<section class="cards">
-
-    <div id="diseases" class="card">
-        <h3>Disease Database</h3>
         <p>
-            Search information on hundreds of rare diseases,
-            including symptoms, diagnosis methods, inheritance
-            patterns, and treatment options.
+            Explore rare disease information, treatment options,
+            clinical trials, patient advocacy organizations,
+            and support communities all in one place.
         </p>
 
-        <button onclick="alert('Example Disease: Duchenne Muscular Dystrophy')">
-            View Disease Example
+        <button onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})">
+            Ask Our AI Assistant
         </button>
-    </div>
+    </section>
 
-    <div id="research" class="card">
-        <h3>Research Updates</h3>
+    <section class="cards">
+
+        <div class="card">
+            <h3>Disease Database</h3>
+
+            <p>
+                Learn about rare diseases, including symptoms,
+                diagnosis, inheritance patterns, and treatment options.
+            </p>
+
+            <button onclick="window.location.href='conditions.html'">
+                Explore Diseases
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Research & Clinical Trials</h3>
+
+            <p>
+                Stay informed about emerging therapies, ongoing clinical
+                trials, gene therapies, and scientific breakthroughs.
+            </p>
+
+            <button onclick="window.location.href='research.html'">
+                View Research
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Patient Resources</h3>
+
+            <p>
+                Access educational materials, advocacy organizations,
+                financial assistance programs, and healthcare resources.
+            </p>
+
+            <button onclick="window.location.href='resources.html'">
+                Find Resources
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Support Communities</h3>
+
+            <p>
+                Connect with patient networks, caregiver communities,
+                support groups, and mental health resources.
+            </p>
+
+            <button onclick="window.location.href='support.html'">
+                Find Support
+            </button>
+        </div>
+
+    </section>
+
+    <section class="featured">
+        <h2>Featured Rare Disease</h2>
+
+        <h3>Duchenne Muscular Dystrophy (DMD)</h3>
+
         <p>
-            Stay informed about emerging therapies,
-            clinical trials, gene-editing technologies,
-            and the latest scientific discoveries.
+            Duchenne Muscular Dystrophy is a rare genetic disorder
+            characterized by progressive muscle degeneration and weakness.
+            Early diagnosis and treatment can help improve quality of life.
         </p>
 
-        <button onclick="alert('Latest update: New gene therapy entered Phase II trials.')">
-            View Research Update
-        </button>
-    </div>
-
-    <div id="support" class="card">
-        <h3>Patient Resources</h3>
         <p>
-            Access educational materials, advocacy groups,
-            financial assistance programs, and caregiver
-            support communities.
+            Patients and caregivers often seek information about symptoms,
+            treatment options, clinical trials, and support programs.
+            Our AI assistant can help answer questions and guide users
+            toward relevant resources.
         </p>
+    </section>
 
-        <button onclick="alert('Support organizations found.')">
-            Find Resources
+    <section class="contact">
+        <h2>Contact Us</h2>
+
+        <p>Email: info@rarediseaseprototype.org</p>
+        <p>Phone: (555) 123-4567</p>
+
+        <button onclick="window.location.href='mailto:info@rarediseaseprototype.org'">
+            Email Us
         </button>
-    </div>
+    </section>
 
-</section>
+    <footer>
+        <p>&copy; 2026 Rare Disease Information Portal</p>
+    </footer>
 
-<section style="padding:40px;">
-    <h2>Featured Rare Disease</h2>
+    <!-- Chatbase AI Assistant -->
+    <script>
+    (function(){
+        if(!window.chatbase || window.chatbase("getState") !== "initialized"){
+            window.chatbase = (...arguments) => {
+                if(!window.chatbase.q){
+                    window.chatbase.q = [];
+                }
+                window.chatbase.q.push(arguments);
+            };
 
-    <p>
-        Duchenne Muscular Dystrophy (DMD) is a rare genetic disorder
-        characterized by progressive muscle degeneration. Early diagnosis
-        and treatment can help improve quality of life and long-term outcomes.
-    </p>
+            window.chatbase = new Proxy(window.chatbase,{
+                get(target,prop){
+                    if(prop === "q"){
+                        return target.q;
+                    }
+                    return (...args) => target(prop,...args);
+                }
+            });
+        }
 
-    <p>
-        Patients and caregivers often have questions about symptoms,
-        treatment options, ongoing research, and available support programs.
-        Our AI assistant can help answer these questions and guide users
-        toward relevant resources.
-    </p>
-</section>
+        const onLoad = function(){
+            const script = document.createElement("script");
+            script.src = "https://www.chatbase.co/embed.min.js";
+            script.id = "Q1DM_hfrqOgxOB5YCjSSe";
+            script.domain = "www.chatbase.co";
+            document.body.appendChild(script);
+        };
 
-<section id="contact" style="padding:40px;">
-    <h2>Contact Us</h2>
-
-    <p>Email: info@rarediseaseprototype.org</p>
-    <p>Phone: (555) 123-4567</p>
-
-    <button onclick="window.location.href='mailto:info@rarediseaseprototype.org'">
-        Email Us
-    </button>
-</section>
-
-<footer style="padding:20px; text-align:center;">
-    <p>© 2026 Rare Disease Website Prototype</p>
-</footer>
+        if(document.readyState === "complete"){
+            onLoad();
+        } else {
+            window.addEventListener("load", onLoad);
+        }
+    })();
+    </script>
 
 </body>
 </html>
